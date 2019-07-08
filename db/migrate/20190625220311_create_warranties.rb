@@ -8,6 +8,7 @@ class CreateWarranties < ActiveRecord::Migration[5.2]
       t.text :notes
       t.integer :photo_id
       t.integer :user_id
+      t.date :expiration, :default => nil
 
       t.timestamps
     end

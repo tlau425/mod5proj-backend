@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_06_25_220337) do
     t.text "notes"
     t.integer "photo_id"
     t.integer "user_id"
+    t.date "expiration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
