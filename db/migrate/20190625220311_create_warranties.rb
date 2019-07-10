@@ -6,7 +6,6 @@ class CreateWarranties < ActiveRecord::Migration[5.2]
       t.integer :wrnty_days
       t.date :buy_date
       t.text :notes
-      t.integer :photo_id
       t.integer :user_id
       t.date :expiration, :default => nil
 

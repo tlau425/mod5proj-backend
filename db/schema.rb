@@ -16,7 +16,8 @@ ActiveRecord::Schema.define(version: 2019_06_25_220337) do
   enable_extension "plpgsql"
 
   create_table "photos", force: :cascade do |t|
-    t.string "img_url"
+    t.string "picture", default: "https://t3.ftcdn.net/jpg/02/03/77/10/500_F_203771054_ZCH2MokNqs3BX5RXyoHzFJR1ERhUMjxm.jpg"
+    t.integer "warranty_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

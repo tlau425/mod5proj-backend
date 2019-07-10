@@ -7,8 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-tommy = User.create(username: 'tommy', password_digest: '123')
-pic = Photo.create(img_url: 'www.asdf.com')
 
 # 10.times do
 #   User.create(
@@ -16,17 +14,18 @@ pic = Photo.create(img_url: 'www.asdf.com')
 #     password_digest: '123'
 #   )
 # end
-
-30.times do
+tommy = User.create(username: 'tommy', password_digest: '123')
+60.times do
   Warranty.create(
     name: Faker::Appliance.equipment,
     category: Faker::Color.color_name,
     wrnty_days: Faker::Number.between(1,100),
     buy_date: '2019/05/10',
     notes: Faker::ChuckNorris.fact,
-    photo_id: 1,
     user_id: 1
     # user_id: Faker::Number.between(1,10)
   )
 end
-car = Warranty.create(name: 'car', category: 'cars', wrnty_days: 30, buy_date: '2019/01/01', notes: 'hello', photo_id: 1, user_id: 1)
+
+pic = Photo.create(picture: 'https://sites.google.com/site/louyifei/_/rsrc/1468866875963/research/barcode/diaper_clear.jpg', warranty_id: 1)
+car = Warranty.create(name: 'car', category: 'cars', wrnty_days: 30, buy_date: '2019/01/01', notes: 'hello', user_id: 1)
